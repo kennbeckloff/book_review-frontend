@@ -61,3 +61,17 @@ justify-self: auto;
   display: flex;
   justify-content: end;
 }
+#book-card{
+  background-color: rgba(0, 0, 139, 0.314);
+}
+#book-title , #book-description, .book-authors, h4{
+  color: #e5e5e5;
+  text-align: center;
+  font-family: 'DM Sans', sans-serif;
+font-family: 'Dosis', sans-serif;
+font-size: large;
+}
+#book-button{
+  margin-left: auto;
+  text-align: center;
+}
