@@ -6,11 +6,61 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
 :root {
   background-image: url("image/galaxy.jpg");
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
+}
+.uk-grid-column-small, .uk-grid-small {
+  margin-left: -15px;
+  text-align: center;
+justify-content: center;
+}
+.uk-h2, h2 {
+  font-size: 1.7rem;
+  line-height: 1.3;
+  color: #e5e5e5;
+  font-size: xx-large;
+  padding-top: 100px;
+}
+#reviews{
+  background-color:#e5e5e5;
+}
+
+.uk-link, a {
+  color: #e5e5e5;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: xx-large;
+padding: 0 10px 0 20px;
+text-decoration: none;
+text-transform:uppercase;
+font-family: 'Dosis', sans-serif;
+
+}
+#nav-right {
+  display: flex;
+  justify-content: end;
+}
+.uk-navbar-container:not(.uk-navbar-transparent) {
+  background: none;
+}
+
+h1 {
+  font-size: 2.23125rem;
+  line-height: 1.2;
+  color: #e5e5e5;
+  text-align: center;
+  font-family: 'Dosis', sans-serif;
+
+}
+
+#search-book {
+ padding: auto;
+  background-color: #0d0b2184;
+  text-align: center;
 }
 #login {
   color: #ffffff;
@@ -46,20 +96,26 @@ color:black;
   text-decoration: none;
 
 }
-.uk-navbar-container:not(.uk-navbar-transparent) {
-  background: none;
+
+.uk-button:hover{
+  color: #e5e5e5;
+  background-color:rgba(0, 0, 139, 0.393);
 }
-.uk-container {
-  display: flow-root;
-  box-sizing: content-box;
-  max-width: 1200px;
+.uk-link, a {
+  color: #e5e5e5;
+  cursor: pointer;
+ text-decoration: none; 
+}
+.uk-link, a:hover {
+  color: #e5e5e5;
+  cursor: pointer;
+  /* background-color: rgb(3, 3, 82); */
+}
+canvas, img, svg, video {
+  display: block;
   margin-left: auto;
   margin-right: auto;
-justify-self: auto;
-}
-#nav-right {
-  display: flex;
-  justify-content: end;
+  width: 50%;
 }
 #book-card{
   background-color: rgba(0, 0, 139, 0.314);
@@ -75,8 +131,52 @@ font-size: large;
   margin-left: auto;
   text-align: center;
 }
-#search-book {
-  padding: auto;
-   background-color: #0d0b2184;
-   text-align: center;
- }
+
+label {
+  cursor: default;
+  color: #e5e5e5;
+  font-size:x-large;
+}
+.uk-h2, h2 {
+  font-size: 1.7rem;
+  line-height: 1.3;
+  color: #e5e5e5;
+  font-size: xx-large;
+}
+#login{
+    color: #ffffff;
+    cursor: pointer;
+    font-size: medium;
+}
+.uk-container {
+  display: flow-root;
+  box-sizing: content-box;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+justify-self: auto;
+}
+p {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  color: #e5e5e5;
+}
+#want-to-read{
+  background-color: rgba(0, 0, 139, 0.314);
+  text-align: center;
+}
+.uk-grid-column-small, .uk-grid-small {
+  margin-left: -15px;
+  text-align: center;
+}
+.uk-card-title, p{
+  line-height: 1.4;
+  text-align: center;
+}
+code {
+  font-family: 'Dosis', sans-serif;
+ 
+}
