@@ -12,3 +12,37 @@ body {
   background-attachment: fixed;
   background-repeat: no-repeat;
 }
+#login {
+  color: #ffffff;
+  cursor: pointer;
+  font-size: x-large;
+}
+
+.uk-card-default {
+  background-color: rgba(8, 6, 79, 0.552);
+  border-radius: 50px;
+  color: #666;
+  box-shadow: 0 5px 15px rgb(0 0 0 / 8%);
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+.uk-button {
+background-color: #e5e5e5;  
+color:black;
+  margin-top: 5px;
+  margin-left: 12px;
+  margin-right: 17px;
+  margin-bottom: 5px;
+  border: none;
+  display: inline-block;
+  border-radius: 0;
+  box-sizing: border-box;
+  padding: 0 30px;
+  vertical-align: middle;
+  font-size: .875rem;
+  line-height: 38px;
+  text-align: center;
+  text-decoration: none;
+
+}
