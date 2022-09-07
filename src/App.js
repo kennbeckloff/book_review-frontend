@@ -1,24 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import * as React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import AppNavbar from "./components/Navbar";
+import SearchBooks from "./pages/SearchBooks";
+import WantToRead from "./pages/WantToRead";
+import Login from "./components/LoginForm";
+import Signup from "./components/Signupform";
+import SingleBook from "./pages/SingleBook";
+
+
+
+
+const authLink = setContext((_, { headers }) => {
+  const token = localStorage.getItem("id_token");
+ 
+const client = new ApolloClient({
+  link: authLink.concat(httpLink),
+  cache: new InMemoryCache(),
+});
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+  return (   
+      <Router>
+        <>
+          <AppNavbar />
+          <Routes>
+            <Route path="/" element={<SearchBooks />} />
+            <Route path="/want" element={<WantToRead />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/signup" element={<Signup />} />
+            <Route path="/book" element={<SingleBook />} />
+            <Route render={() => <h1 className="display-2">Wrong page!</h1>} />
+          </Routes>
+        </>
+      </Router>  
+   
   );
 }
 
