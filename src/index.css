@@ -75,3 +75,8 @@ font-size: large;
   margin-left: auto;
   text-align: center;
 }
+#search-book {
+  padding: auto;
+   background-color: #0d0b2184;
+   text-align: center;
+ }
