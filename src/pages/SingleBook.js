@@ -8,7 +8,7 @@ function SingleBook() {
   const { loading, data, refetch } = useQuery(QUERY_REVIEWS, {
     variables: { bookId: bookId },
   });
-  
+  const reviews = data?.reviews || [];
   const [reviewText, setReviewText] = useState("");
   const me = useQuery(GET_ME);
   console.log(me);
@@ -35,6 +35,24 @@ function SingleBook() {
     },
   });
 
+  const handleChange = async (event) => {
+    setReviewText(event.target.value);
+  };
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+
+    try {
+      await createReview({
+        variables: { reviewText, bookId: bookId },
+      });
+      setReviewText("");
+      refetch();
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
   return (
     <>
       <Link to="/">←Back To Search</Link>
@@ -52,7 +70,45 @@ function SingleBook() {
           </div>
         </div>
 
-        
+        <div
+          className="uk-child-width-1-3@m uk-grid-small uk-grid-match"
+          uk-grid="true">
+          <div>
+            <div className="uk-card uk-card" id="rewiews">
+              <h2>Reviews</h2>
+              {loading ? (
+                <div>Loading...</div>
+              ) : (
+                reviews.map((review, i) => (
+                  <div key={`rev_${i}`}>
+                    <p>
+                      {review.username} at {review.createdAt}
+                    </p>
+                    <p>{review.reviewText}</p>
+                  </div>
+                ))
+              )}
+            </div>
+            <form className="review-form" onSubmit={handleSubmit}>
+              <div className="uk-panel uk-margin-top  uk-object-scale-down">
+                <textarea
+                  name="review-body"
+                  id="review-body"
+                  className="uk-textarea uk-border-rounded"
+                  rows="10"
+                  cols="100"
+                  value={reviewText}
+                  placeholder="Add your review..."
+                  onChange={handleChange}></textarea>
+                <button
+                  className="uk-button uk-position-default uk-border-rounded"
+                  type="submit">
+                  ADD YOUR REVIEW
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
       </div>
     </>
   );
