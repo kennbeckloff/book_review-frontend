@@ -1,13 +1,12 @@
 import React from "react";
-
+import { removeBookId } from "../utils/localStorage";
+import { Link } from "react-router-dom";
 
 const WantTo = () => {
   const { loading, data, refetch } = useQuery(GET_ME);
   const [removeBook] = useMutation(REMOVE_BOOK);
   const userData = data?.me || [];
-  //   const userDataLength = Object.keys(userData).length;
 
-  // create function that accepts the book's mongo _id value as param and deletes the book from the database
   const handleRemoveBook = async (bookId) => {
     const token = Auth.loggedIn() ? Auth.getToken() : null;
 
@@ -27,7 +26,7 @@ const WantTo = () => {
     }
   };
 
-  // if data isn't here yet, say so
+  // if empty?
   if (loading) {
     return <h2>LOADING...</h2>;
   }
