@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import Books from "../components/Books";
+import Books from "./src/components/Books";
 
 const SearchBooks = () => {
   const [searchedBooks, setSearchedBooks] = useState([]);
