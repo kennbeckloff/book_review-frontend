@@ -1,11 +1,11 @@
 import * as React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import AppNavbar from "./components/Navbar";
-import SearchBooks from "./pages/SearchBooks";
-import WantToRead from "./pages/WantToRead";
-import Login from "./components/LoginForm";
-import Signup from "./components/Signupform";
-import SingleBook from "./pages/SingleBook";
+import AppNavbar from "./src/components/Navbar.js";
+import SearchBooks from "./src/pages/SearchBooks.js";
+import WantToRead from "./src/pages/WantToRead.js";
+import Login from "./src/components/LoginForm.js";
+import Signup from "./src/components/Signupform.js";
+import SingleBook from "./src/pages/SingleBook.js";
 
 
 
