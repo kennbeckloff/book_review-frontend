@@ -1,31 +1,19 @@
-import * as React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import AppNavbar from "./components/Navbar";
-import SearchBooks from "./pages/SearchBooks";
-import WantToRead from "./pages/WantToRead";
-import Login from "./components/LoginForm";
-import Signup from "./components/Signupform";
-import SingleBook from "./pages/SingleBook";
+import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+// import LandingPage from './pages/LandingPage';
+// import Home from './pages/Home';
+import { Outlet} from 'react-router-dom' 
 
 
 function App() {
   return (
-    <ApolloProvider client={client}>
-      <Router>
-        <>
-          <AppNavbar />
-          <Routes>
-            <Route path="/" element={<SearchBooks />} />
-            <Route path="/want" element={<WantToRead />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/signup" element={<Signup />} />
-            <Route path="/book" element={<SingleBook />} />
-            <Route render={() => <h1 className="display-2">Wrong page!</h1>} />
-          </Routes>
-        </>
-      </Router>
-    </ApolloProvider>
-   
+    <div className="App">
+      <header className="App-header">
+        Kenya National Library Service Book Review
+      </header>
+      <Outlet />
+      <footer></footer>
+    </div>
   );
 }
 

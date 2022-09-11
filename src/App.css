@@ -1,39 +1,45 @@
 .App {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+:root {
+  background-image: url("image/galaxy.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  /* background-color: #282c34; */
+  /* min-height: 100vh; */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  font-size: calc(1.5rem + 2vmin);
+  font-weight: bold;
+  /* color: white; */
 }
 
-.App-link {
-  color: #61dafb;
+.Landingpage {
+  width: 40%;
+  margin: auto;
+  margin-top: 1rem;
+  box-shadow: rgb(0 0 0 / 16%) 1px 1px 10px;
+  border-radius: 10px;
+  padding: 2rem;
 }
 
+nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.landingButton {
+  padding: 0.5rem 3rem;
+  margin: 4px 7px;
+  border-radius: 5px;
+  background-color: white;
+  color: black; 
+  border: 2px solid #008CBA;
 }
