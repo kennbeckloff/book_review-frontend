@@ -26,7 +26,7 @@ function Login() {
     event.preventDefault();
     // console.log(formData)
     axios
-      .post("http://localhost:9292/users/login", formData)
+      .post("http://localhost:9393/users/login", formData)
       .then((response) => {
         if (Object.values(response.data).length > 1) {
           alert("Login successful");
@@ -43,12 +43,12 @@ function Login() {
       <div className="mb-3">
         <label>Email</label>
         <input
-          type="text"
+          type="email"
           className="form-control"
           placeholder="Enter email"
-          value={formData.username}
+          value={formData.email}
           onChange={handleChange}
-          id="username"
+          id="email"
         />
       </div>
       <div className="mb-3">
