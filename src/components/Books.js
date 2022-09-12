@@ -15,13 +15,13 @@ function Books({ authors, averageRating, description, id, image, language, pageC
             <div className="image" onClick={handleShow}>
                 <img src={image} alt={title} />
             </div>
-            <div>
-                <p>{title}</p>
+            <div>                
                 <p>Author: {authors}</p>
             </div>
 
             <Modal show={show} onHide={handleClose}>
-                <Modal.Header closeButton>
+            <p id="gmi"><img src={image} alt={title} /></p>
+                <Modal.Header closeButton>                
                     <Modal.Title>{title}</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
