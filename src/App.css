@@ -43,3 +43,25 @@ nav ul {
   color: black; 
   border: 2px solid #008CBA;
 }
+
+.parent{
+  border: 1px solid black;
+  width: 80%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-column-gap: 0.5rem;
+  grid-row-gap: 0.5rem;
+  padding:0.5rem;
+}
+
+.container {
+  margin: 1rem 0.5rem 0 0;
+  padding: 0.5rem;
+  border: 1px solid grey;
+  border-radius: 0.5rem;
+}
+
+.image{
+  cursor: pointer;
+}
