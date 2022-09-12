@@ -10,6 +10,8 @@ function Books({ authors, averageRating, description, id, image, language, pageC
     const handleShow = () => setShow(true);
     const handleClose = () => setShow(false);
 
+   
+
     return(
         <div className="container" key={id}>
             <div className="image" onClick={handleShow}>
@@ -22,23 +24,23 @@ function Books({ authors, averageRating, description, id, image, language, pageC
             <Modal show={show} onHide={handleClose}>
             <p id="gmi"><img src={image} alt={title} /></p>
                 <Modal.Header closeButton>                
-                    <Modal.Title>{title}</Modal.Title>
+                    <Modal.Title id="gmo">{title}</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
                     <p>{description}</p>
                     <p>Publisher: {publisher} | Date: {publishedDate}</p>
                     <p>Rating: {averageRating} ({ratingsCount})</p>
-
                     <Form>
                         <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1" >
                             <Form.Label>Add Review</Form.Label>
-                            <Form.Control as="textarea" rows={3} placeholder="say something" autoFocus />
+                            <Form.Control as="textarea" rows={3} placeholder="add your " autoFocus />
                         </Form.Group>
                     </Form>
+                    
                 </Modal.Body>
                 <Modal.Footer>
                     <Button variant="secondary" onClick={handleClose}>Close</Button>
-                    <Button variant="primary" onClick={handleClose}>Save Changes</Button>
+                    <Button variant="primary" onClick={handleClose}>Add</Button>
                 </Modal.Footer>
             </Modal>
         </div>

@@ -60,7 +60,8 @@ nav ul {
   margin: 1rem 0.5rem 0 0;
   padding: 0.5rem;
   border: 1px solid grey;
-  border-radius: 0.5rem;
+  border-radius: 2rem;
+  background-image: url("image/galaxy.jpg");
 }
 
 .image{
@@ -72,5 +73,9 @@ nav ul {
 #gmi{
   text-align: center;
 }
-
+#gmi{
+  text-align: center;
+  color: brown; 
   
+}
+
