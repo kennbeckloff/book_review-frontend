@@ -1,3 +1,20 @@
+# BOOK_REVIEW
+*****
+### Author : Kenn Beckloff © 2022
+****
+## Project Description
+The project is ment for Book lovers, who at times find it hard to pick on which book to read. Users will be able to view Book reviews as well as add their own reviews on different books.
+******
+
+## Screenshots
+ ![image](https://user-images.githubusercontent.com/36301800/189766537-1970dff7-93af-43d6-bfc5-6dc6e9f4e45a.png)
+ ![image](https://user-images.githubusercontent.com/36301800/189766742-8b560b11-1061-48e8-b6b1-55f06146fb2f.png)
+ ![image](https://user-images.githubusercontent.com/36301800/189766864-9333852b-0432-4dba-b036-5a350721a2b5.png)
+ ![image](https://user-images.githubusercontent.com/36301800/189767013-3853272c-95e3-404b-a963-9b7243964001.png)
+ 
+********
+### Project LIve Link
+[https://book-review-frontend-nine.vercel.app/]
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
